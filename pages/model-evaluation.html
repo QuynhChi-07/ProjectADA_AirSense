@@ -3,8 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đánh giá mô hình - AirSense HCMC</title>
+    <title>Đánh Giá Mô Hình</title>
+    <link rel="stylesheet" href="../assets/css/model-evaluation.css">
+    <link href="../components/sidebar.css" rel="stylesheet"/>
+    <link href="../components/dropdown.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header Info -->
+        <header class="header-info">
+            <div class="user-info">
+                <i class="fas fa-user"></i>
+                <span>Thành phố Hồ Chí Minh</span>
+            </div>
+            <div class="guideline-info">
+                <i class="fas fa-info-circle"></i>
+                <span>WHO guideline: PM2.5 24h = 15 µg/m²</span>
+            </div>
+        </header>
+
+        <!-- Page Title -->
+        <h1 class="page-title">ĐÁNH GIÁ MÔ HÌNH</h1>
+
+        <!-- Content Grid -->
+        <div class="content-grid">
+            <!-- Comparison Table Section -->
+            <section class="card comparison-section">
+                <h2 class="section-title">Bảng so sánh các mô hình</h2>
+                <div class="controls">
+                    <div class="dropdown-wrapper">
+                        <label for="station-select">Chọn trạm:</label>
+                        <select id="station-select" class="dropdown">
+                            <option value="S1">S1 - Giao thông</option>
+                            <option value="S2">S2 - Residential</option>
+                            <option value="S3">S3 - Industrial</option>
+                        </select>
+                    </div>
+                    <button class="btn-create">Tạo</button>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Mô hình</th>
+                            <th>RMSE</th>
+                            <th>MAE</th>
+                            <th>R²</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Linear Regression</td>
+                            <td>9.3</td>
+                            <td>10</td>
+                            <td>11.1</td>
+                        </tr>
+                        <tr>
+                            <td>Random Forest</td>
+                            <td>9.3</td>
+                            <td>10</td>
+                            <td>11.1</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                XGBoost
+                                <span class="badge-best">Tốt nhất</span>
+                            </td>
+                            <td>9.3</td>
+                            <td>10</td>
+                            <td>11.1</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Best Model Section -->
+            <section class="card best-model-section">
+                <h2 class="section-title">Mô hình tốt nhất</h2>
+                <div class="best-model-box">
+                    <h3 class="best-model-name">XGBOOST</h3>
+                </div>
+                <p class="best-model-description">Là mô hình Machine Learning...</p>
+            </section>
+
+            <!-- Chart Section -->
+            <section class="card chart-section">
+                <h2 class="section-title">Biểu đồ so sánh mô hình</h2>
+                <p class="chart-description">Biểu đồ thể hiện RMSE/MAE của các mô hình</p>
+                <div class="chart-container">
+                    <canvas id="comparison-chart"></canvas>
+                </div>
+                <p class="chart-note">(Biểu đồ cột so sánh RMSE/MAE của các model) minh hoạt bằng màu bên dưới</p>
+            </section>
+
+            <!-- Area Difference Section -->
+            <section class="card area-difference-section">
+                <h2 class="section-title">Sự khác biệt theo khu vực:</h2>
+                <p class="area-difference-text">Traffic thường biến động theo giờ → khó hơn Residential.</p>
+            </section>
+
+            <!-- Reason Section -->
+            <section class="card reason-section">
+                <h2 class="section-title">Lý do chọn mô hình:</h2>
+                <p class="reason-text">ưu tiên R² cao và RMSE/MAE thấp, đồng thời ổn định khi áp dụng đa trạm</p>
+            </section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/model-evaluation.js"></script>
+    <script src="../components/sidebar.js"></script>
+    <script src="../components/dropdown.js"></script>
 </body>
 </html>

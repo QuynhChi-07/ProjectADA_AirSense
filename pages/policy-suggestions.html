@@ -3,8 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gợi ý chính sách - AirSense HCMC</title>
+    <title>Gợi ý chính sách - ADA</title>
+    <link rel="stylesheet" href="../assets/css/policy-suggestions.css">
+    <link href="../components/sidebar.css" rel="stylesheet"/>
+    <link href="../components/dropdown.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 <body>
+    <!-- Background với bầu trời và mây -->
+
+
+
+    <!-- Khu vực nội dung chính -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="content-header">
+            <h1 class="main-title">Gợi ý chính sách</h1>
+            <div class="header-info">
+                <div class="info-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>Thành phố Hồ Chí Minh</span>
+                </div>
+                <div class="info-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="2" x2="12" y2="6"/>
+                        <line x1="12" y1="18" x2="12" y2="22"/>
+                        <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"/>
+                        <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"/>
+                        <line x1="2" y1="12" x2="6" y2="12"/>
+                        <line x1="18" y1="12" x2="22" y2="12"/>
+                        <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"/>
+                        <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"/>
+                    </svg>
+                    <span>WHO guideline: PM2.5 24h = 15 µg/m²</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Panel SHAP Plot -->
+        <section class="panel shap-plot-panel">
+            <h2 class="panel-title">SHAP Plot</h2>
+            <p class="panel-subtitle">[giải thích chức năng biểu đồ]</p>
+            <div class="chart-container">
+                <div class="chart-placeholder">
+                    <div class="chart-dot"></div>
+                    <p>(Biểu đồ SHAP) màu của chấm bi là:</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Panel Ý nghĩa SHAP -->
+        <section class="panel shap-meaning-panel">
+            <h2 class="panel-title">Ý nghĩa SHAP</h2>
+            <p class="meaning-text">
+                SHAP cho biết mỗi biến "đẩy" dự báo PM2.5 tăng/giảm bao nhiêu ở từng thời điểm. 
+                Giá trị tuyệt đối lớn - ảnh hưởng mạnh hơn trong mô hình. 
+                Lưu ý: SHAP giải thích mô hình, không khẳng định quan hệ nhân quả.
+            </p>
+        </section>
+
+        <!-- Panel Các gợi ý chính sách -->
+        <section class="panel policy-suggestions-panel">
+            <h2 class="panel-title">Các gợi ý chính sách</h2>
+            <div class="suggestions-list">
+                <div class="suggestion-item">
+                    Ưu tiên can thiệp khu vực giao thông giờ cao điểm nếu NO2/CO nổi bật trong SHAP
+                </div>
+                <div class="suggestion-item">
+                    Kích hoạt cảnh báo sớm theo khung giờ khi dự báo vượt WHO kéo dài (heatmap đó)
+                </div>
+                <div class="suggestion-item">
+                    Khi độ ẩm cao, tăng truyền thông và khuyến nghị bảo vệ sức khoẻ (nhóm nhạy cảm)
+                </div>
+                <div class="suggestion-item">
+                    Kiểm tra nguồn phát thải cục bộ tại trạm công nghiệp khi xuất hiện spike bất thường
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/js/policy-suggestions.js"></script>
+    <script src="../components/sidebar.js"></script>
+    <script src="../components/dropdown.js"></script>
 </body>
 </html>
+
