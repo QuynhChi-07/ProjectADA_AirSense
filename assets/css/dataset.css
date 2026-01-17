@@ -35,22 +35,6 @@
     margin-bottom: clamp(20px, 2.5vw, 30px);
 }
 
-.data-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: clamp(10px, 1.5vw, 15px);
-    padding: clamp(20px, 2.5vw, 30px);
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-}
-
-.card-title {
-    font-family: '72', sans-serif;
-    font-weight: 600;
-    font-size: clamp(13px, 1.5vw, 16px);
-    color: var(--text-gray);
-    margin-bottom: clamp(10px, 1.5vw, 15px);
-}
 
 .card-value {
     font-family: '72', sans-serif;
@@ -73,14 +57,6 @@
     margin-bottom: clamp(20px, 2.5vw, 30px);
 }
 
-.heatmap-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: clamp(10px, 1.5vw, 15px);
-    padding: clamp(20px, 2.5vw, 30px);
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-}
 
 .heatmap-container {
     margin-top: clamp(15px, 2vw, 20px);
@@ -159,14 +135,6 @@
     margin-bottom: clamp(20px, 2.5vw, 30px);
 }
 
-.variable-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: clamp(10px, 1.5vw, 15px);
-    padding: clamp(20px, 2.5vw, 30px);
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-}
 
 .variable-controls {
     display: flex;
