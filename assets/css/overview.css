@@ -4,11 +4,15 @@ html, body {
   overflow-x: hidden;
 }
 
+:root {
+  --font-family-base: "72", "Segoe UI", Arial, sans-serif;
+}
+
 .trang-tong-quan {
   position: relative;
   width: 100vw;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), url("../img/bg.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.35)), url("../img/background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,6 +24,7 @@ html, body {
   --frame-width: 1101px;
   --frame-height: 1531px;
   --frame-scale: clamp(0.85, calc((100vw - var(--frame-left) - var(--frame-right)) / var(--frame-width)), 1.15);
+  font-family: var(--font-family-base);
 }
   
 .trang-tong-quan .frame {
@@ -2072,8 +2077,8 @@ html, body {
   top: 108px;
   left: 28px;
   width: 1049px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.35);
+  border-radius: 24px;
+  background: rgba(91, 115, 139, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
   overflow: hidden;
@@ -2197,6 +2202,7 @@ html, body {
 
 .trang-tong-quan .overview-stats-secondary {
   top: 1019px;
+  background: rgba(91, 115, 139, 0.2);
 }
 
 .trang-tong-quan .rectangle-3,
@@ -2295,6 +2301,7 @@ html, body {
     row-gap: 6px;
     justify-content: end;
     align-items: center;
+    text-align: right;
   }
 
 .trang-tong-quan .group-4 .text-wrapper-59,
@@ -2310,11 +2317,13 @@ html, body {
     grid-column: 1 / -1;
     width: auto;
     height: auto;
+    justify-content: flex-end;
   }
 
 .trang-tong-quan .group-4 .text-wrapper-59,
 .trang-tong-quan .group-4 .text-wrapper-60 {
     margin: 0;
+    text-align: right;
   }
 
 .trang-tong-quan .tr-m-g-m .text-wrapper-61 {

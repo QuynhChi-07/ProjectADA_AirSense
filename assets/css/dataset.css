@@ -151,6 +151,11 @@
     min-width: clamp(140px, 16vw, 180px);
 }
 
+.control-group .dropdown-container {
+    width: 100%;
+    max-width: 220px;
+}
+
 .control-label {
     font-family: '72', sans-serif;
     font-weight: 600;
@@ -238,6 +243,10 @@
     
     .header-info {
         align-items: flex-start;
+    }
+
+    .header-meta-item {
+        justify-content: flex-start;
     }
 }
 

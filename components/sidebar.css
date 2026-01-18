@@ -53,6 +53,7 @@
 
 .side-ql-unchoose.collapsed .logo-small {
     display: block !important;
+    top: calc((24px + 30px + 297px) / 2 - 25px);
 }
 
 /* Toggle Button */
